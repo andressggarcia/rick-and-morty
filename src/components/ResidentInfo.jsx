@@ -19,7 +19,35 @@ const ResidentInfo = ({residents}) => {
         <div className='divCharacters'>
             <li >
                 <img className='image' src={characters.image} alt="" />
-                <div className='status'><p>{characters.status}</p></div>
+                <div className='status'>
+                {(() => {
+            if (characters.status === "Dead") {
+              return (
+                <div
+                  className={`status-dead`}
+                >
+                  {characters.status}
+                </div>
+              );
+            } else if (characters.status === "Alive") {
+              return (
+                <div
+                  className={`status-alive`}
+                >
+                  {characters.status}
+                </div>
+              );
+            } else {
+              return (
+                <div
+                  className={`unknown`}
+                >
+                  {characters.status}
+                </div>
+              );
+            }
+          })()}
+                </div>
                 <div className='infoCharacters'>
                     <h3 className='nameCharacter'>{characters.name}</h3>
                     <div className='hr'></div>

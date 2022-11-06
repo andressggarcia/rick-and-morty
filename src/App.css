@@ -220,6 +220,19 @@ line-height: 28px;
  cursor: pointer;
 }
 
+
+.status-dead{
+background-color: red;
+color: white;
+}
+.status-alive{
+background-color: green;
+color: white;
+}
+.unknown{
+background-color: gray;
+}
+
 @media (max-width: 558px) {
   .img{ 
     width:400px;
